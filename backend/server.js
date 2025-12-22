@@ -17,7 +17,21 @@ const openai = new OpenAI({
 const app = express();
 
 // Middleware
-app.use(cors());
+const allowedOrigins = [
+  process.env.FRONTEND_URL, // your Vercel URL later (ex: https://yourapp.vercel.app)
+  "http://localhost:3000",  // local dev
+].filter(Boolean);
+
+app.use(cors({
+  origin: function (origin, callback) {
+    // allow requests like Postman/no-origin too
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) return callback(null, true);
+    return callback(new Error("Not allowed by CORS"));
+  },
+  credentials: true,
+}));
+
 app.use(express.json());
 
 // Test route

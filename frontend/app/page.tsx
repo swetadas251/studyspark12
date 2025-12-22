@@ -1,5 +1,5 @@
 'use client';
-
+import { API_BASE } from './lib/api';
 import { useState, useEffect } from 'react';
 import { Brain, Sparkles, BookOpen, Target, Zap, ArrowRight, Star, Lightbulb, Rocket, Trophy, RotateCw, ChevronLeft, ChevronRight, Check, X, TrendingUp, LogOut, User as UserIcon } from 'lucide-react';
 import ParticleBackground from './components/ParticleBackground';
@@ -52,7 +52,7 @@ export default function Home() {
       
       // Only track if user is logged in
       if (token) {
-        await fetch('http://localhost:3001/api/analytics/track', {
+        await fetch(`${API_BASE}/api/analytics/track`, {
           method: 'POST',
           headers: { 
             'Content-Type': 'application/json',
@@ -102,7 +102,7 @@ export default function Home() {
         ? { concept: input }
         : { topic: input };
 
-      const response = await fetch(`http://localhost:3001${endpoint}`, {
+      const response = await fetch(`${API_BASE}${endpoint}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body)

@@ -1,5 +1,5 @@
 'use client';
-
+import { API_BASE } from '../lib/api';
 import { useState, useEffect } from 'react';
 import { 
   Chart as ChartJS, 
@@ -58,13 +58,17 @@ export default function Analytics() {
   try {
     const token = localStorage.getItem('token');
     
-    const response = await fetch('http://localhost:3001/api/analytics/stats', {
+    const response = await fetch(`${API_BASE}/api/analytics/stats`, {
       headers: {
         'Authorization': `Bearer ${token}`
       }
     });
     const data = await response.json();
-    setAnalytics(data);
+    if (data && typeof data.totalSessions === "number") {
+  setAnalytics(data);
+} else {
+  setAnalytics(null);
+}
   } catch (error) {
     console.error('Failed to fetch analytics:', error);
   }
@@ -263,10 +267,10 @@ export default function Analytics() {
                   analytics.recentSessions.map((session, index) => (
                     <tr key={index} className="border-b">
                       <td className="py-2">{session.topic}</td>
-                      <td className="py-2 capitalize">{session.type}</td>
-                      <td className="py-2">
-                        {new Date(session.timestamp).toLocaleString()}
-                      </td>
+                      <td className="py-2 capitalize">{session.feature_type ?? session.type}</td>
+<td className="py-2">
+  {new Date(session.created_at ?? session.timestamp).toLocaleString()}
+</td>
                     </tr>
                   ))
                 ) : (

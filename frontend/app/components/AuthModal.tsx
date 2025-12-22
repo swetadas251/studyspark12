@@ -1,5 +1,5 @@
 'use client';
-
+import { API_BASE } from '../lib/api';
 import { useState } from 'react';
 import { X, Mail, Lock, User, Eye, EyeOff } from 'lucide-react';
 import Image from 'next/image';
@@ -34,7 +34,7 @@ export default function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps
         ? { email: formData.email, password: formData.password }
         : formData;
 
-      const response = await fetch(`http://localhost:3001${endpoint}`, {
+      const response = await fetch(`${API_BASE}${endpoint}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body)

@@ -1,5 +1,5 @@
 'use client';
-
+import { API_BASE } from '../lib/api';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Brain, Mail, Lock, User, ArrowRight } from 'lucide-react';
@@ -27,7 +27,7 @@ export default function Auth() {
         ? { email: formData.email, password: formData.password }
         : formData;
 
-      const response = await fetch(`http://localhost:3001${endpoint}`, {
+      const response = await fetch(`${API_BASE}${endpoint}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body)

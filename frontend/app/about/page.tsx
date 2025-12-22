@@ -1,5 +1,4 @@
 'use client';
-
 import { useState } from 'react';
 import { Brain, Code, Heart, Github, Linkedin, Mail, ArrowLeft, Sparkles, Zap, Target, Coffee, Rocket } from 'lucide-react';
 import Link from 'next/link';
