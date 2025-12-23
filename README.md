@@ -1,4 +1,4 @@
-# StudySpark ✨
+# StudySpark
 An AI-powered study buddy that helps you learn faster with explanations, notes, flashcards, quizzes, and a personal analytics dashboard.
 
 > Built to turn “I’m stuck” into “ohhh I get it.”
@@ -20,7 +20,7 @@ I wanted a learning tool that feels like a real assistant during late-night stud
 
 ---
 
-## 🖥️ Tech Stack
+## Tech Stack
 **Frontend**
 - Next.js 14 (App Router)
 - TypeScript
@@ -56,7 +56,7 @@ I wanted a learning tool that feels like a real assistant during late-night stud
 
 ---
 
-## 🧩 Project Structure
+## Project Structure
 ```txt
 ai-study-buddy/
   backend/   # Express API + Postgres
