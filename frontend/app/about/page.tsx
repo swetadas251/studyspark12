@@ -54,9 +54,9 @@ export default function About() {
           </h1>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            StudySpark was born out of late-night study sessions, overloaded tabs, 
-            and the feeling that learning tools should do more. 
-          </p>
+  StudySpark was born out of late-night study sessions and the feeling that learning tools should do more.
+  I built it as a full-stack app with production deployment, JWT auth, and per-user analytics.
+</p>
         </div>
 
         {/* This part talks about the creator (Sweta) */}
@@ -85,7 +85,7 @@ export default function About() {
                   things a little easier for others too.
                 </p>
                 
-                {/* This helps give all of Sweta's social links */}
+                {/* This helps give social links */}
 <div className="flex gap-4 pt-4">
   <a 
     href="https://github.com/swetadas251" 
@@ -148,10 +148,10 @@ export default function About() {
             Tech Stack
           </h2>
           
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <TechCard 
               title="Frontend"
-              items={["Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion", "Chart.js"]}
+              items={["Next.js 16 (App Router)", "TypeScript", "Tailwind CSS", "Framer Motion", "Chart.js"]}
               icon={<Code className="w-6 h-6" />}
               color="from-blue-500 to-cyan-500"
             />
@@ -163,17 +163,30 @@ export default function About() {
             />
             <TechCard 
               title="Features"
-              items={["AI Explanations", "Smart Flashcards", "Interactive Quizzes", "Analytics Dashboard", "User Auth"]}
+              items={[
+  "AI Explain / Notes / Flashcards",
+  "Quiz Generator (MCQ JSON)",
+  "JWT Auth (Login/Register)",
+  "Protected Analytics Endpoint",
+  "Guest Mode Fallback"
+]}
               icon={<Rocket className="w-6 h-6" />}
               color="from-orange-500 to-red-500"
             />
+            <TechCard 
+  title="Deployment"
+  items={["Vercel (Frontend)", "Render (Backend)", "Neon Postgres (DB)", "Env Vars / Secrets", "CORS Allowlist"]}
+  icon={<Target className="w-6 h-6" />}
+  color="from-emerald-500 to-teal-500"
+/>
           </div>
         </div>
 
         {/* This lists some stats */}
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           <StatCard number="5" label="AI Features" icon="🤖" />
-          <StatCard number="3k+" label="API Calls/Month" icon="🚀" />
+          <StatCard number="Full-Stack" label="Vercel + Render + Neon" icon="🌐" />
+<StatCard number="JWT" label="Auth + Protected Routes" icon="🔐" />
         </div>
 
 
