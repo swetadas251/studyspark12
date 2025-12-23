@@ -183,7 +183,7 @@ export default function About() {
         </div>
 
         {/* This lists some stats */}
-        <div className="grid md:grid-cols-2 gap-6 mb-12 md: justify-self-center">
+        <div className="grid md:grid-cols-2 gap-6 mb-12 justify-items-center">
           <StatCard number="5" label="AI Features" icon="🤖" />
           <StatCard number="Full-Stack" label="Vercel + Render + Neon" icon="🌐" />
 <StatCard number="JWT" label="Auth + Protected Routes" icon="🔐" />
