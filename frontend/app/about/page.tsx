@@ -183,11 +183,11 @@ export default function About() {
         </div>
 
         {/* This lists some stats */}
-        <div className="grid md:grid-cols-2 gap-6 mb-12 justify-items-center">
-          <StatCard number="5" label="AI Features" icon="🤖" />
-          <StatCard number="Full-Stack" label="Vercel + Render + Neon" icon="🌐" />
-<StatCard number="JWT" label="Auth + Protected Routes" icon="🔐" />
-        </div>
+        <div className="mx-auto mb-12 grid max-w-5xl grid-cols-1 gap-6 place-items-center sm:grid-cols-3">
+  <StatCard number="5" label="AI Features" icon="🤖" />
+  <StatCard number="Full-Stack" label="Vercel + Render + Neon" icon="🌐" />
+  <StatCard number="JWT" label="Auth + Protected Routes" icon="🔐" />
+</div>
 
 
         {/* This is to take user back to the main page */}
@@ -246,11 +246,13 @@ function TechCard({ title, items, icon, color }: any) {
 // This sets up the statistic cards
 function StatCard({ number, label, icon }: any) {
   return (
-    <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 text-center hover:shadow-xl transition">
+    <div className="w-full max-w-sm min-h-[140px] bg-white/80 backdrop-blur-sm rounded-xl p-6 text-center hover:shadow-xl transition flex flex-col items-center justify-center">
       <div className="text-3xl mb-2">{icon}</div>
+
       <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
         {number}
       </div>
+
       <p className="text-gray-600">{label}</p>
     </div>
   );
