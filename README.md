@@ -42,7 +42,7 @@ I wanted a learning tool that feels like a real assistant during late-night stud
 
 ---
 
-## Architecture (high-level)
+## Architecture
 - Next.js UI calls the Express API using `NEXT_PUBLIC_API_BASE_URL`
 - Auth uses JWT (token stored client-side, sent as `Authorization: Bearer <token>`)
 - Backend talks to Postgres for user accounts
