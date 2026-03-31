@@ -9,14 +9,13 @@ An AI-powered study buddy that helps you learn faster with explanations, notes, 
 
 ## Screenshots
 
-![Flashcards](./screenshot1.png)
-*AI-generated flashcards from any topic*
+<p align="center">
+  <img src="./screenshot1.png" width="30%" />
+  <img src="./screenshot3.png" width="30%" />
+  <img src="./screenshot2.png" width="30%" />
+</p>
 
-![Quiz](./screenshot3.png)
-*Interactive quizzes to test your knowledge*
-
-![Analytics](./screenshot2.png)
-*Personal analytics dashboard tracking study progress*
+*Flashcards • Quiz • Analytics Dashboard*
 
 ## What it does
 StudySpark is a full-stack web app that lets users:
