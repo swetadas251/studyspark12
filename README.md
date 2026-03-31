@@ -7,6 +7,17 @@ An AI-powered study buddy that helps you learn faster with explanations, notes, 
 
 ---
 
+## Screenshots
+
+![Flashcards](./screenshot1.png)
+*AI-generated flashcards from any topic*
+
+![Quiz](./screenshot3.png)
+*Interactive quizzes to test your knowledge*
+
+![Analytics](./screenshot2.png)
+*Personal analytics dashboard tracking study progress*
+
 ## What it does
 StudySpark is a full-stack web app that lets users:
 - Create an account + log in (JWT auth)
