@@ -12,7 +12,7 @@ An AI-powered study buddy that helps you learn faster with explanations, notes, 
 <p align="center">
   <img src="./screenshot1.png" width="30%" />
   <img src="./screenshot3.png" width="30%" />
-  <img src="./screenshot2.png" width="30%" />
+  <img src="./screenshot2.png" width="20%" />
 </p>
 
 *Flashcards • Quiz • Analytics Dashboard*
